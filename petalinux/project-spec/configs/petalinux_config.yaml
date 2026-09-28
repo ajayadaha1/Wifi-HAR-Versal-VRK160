@@ -1,0 +1,256 @@
+device_id: xcvr1602
+processor:
+    psv_cortexa72_0:
+        arch: aarch64
+        ip_name: psv_cortexa72
+        slaves_strings: gic_a72 cci lpd_dma_chan0 lpd_dma_chan1 lpd_dma_chan2 lpd_dma_chan3 lpd_dma_chan4 lpd_dma_chan5 lpd_dma_chan6 lpd_dma_chan7 gem0 gpio0 gpio1 i2c0 i2c1 rtc sdhci1 serial0 serial1 smmu ospi sysmon0 ttc0 ttc1 ttc2 ttc3 usb0 dwc3_0 dma0 dma1 pmc_trng pmc_cfi_cframe_0 pmc_cfu_apb_0 pmc_ppu1_mdm_0 ipi0 ipi3 ipi4 ipi5 ipi6 coresight ps_wizard_0_pmcps_0_psv_pmc_aes ps_wizard_0_pmcps_0_psv_pmc_bbram_ctrl ps_wizard_0_pmcps_0_psv_crf_0 ps_wizard_0_pmcps_0_psv_crl_0 ps_wizard_0_pmcps_0_psv_crp_0 ps_wizard_0_pmcps_0_psv_coresight_a720_cti ps_wizard_0_pmcps_0_psv_coresight_a720_dbg ps_wizard_0_pmcps_0_psv_coresight_a720_etm ps_wizard_0_pmcps_0_psv_coresight_a720_pmu ps_wizard_0_pmcps_0_psv_coresight_a721_cti ps_wizard_0_pmcps_0_psv_coresight_a721_dbg ps_wizard_0_pmcps_0_psv_coresight_a721_etm ps_wizard_0_pmcps_0_psv_coresight_a721_pmu ps_wizard_0_pmcps_0_psv_coresight_apu_cti ps_wizard_0_pmcps_0_psv_coresight_apu_ela ps_wizard_0_pmcps_0_psv_coresight_apu_etf ps_wizard_0_pmcps_0_psv_coresight_apu_fun ps_wizard_0_pmcps_0_psv_coresight_fpd_atm ps_wizard_0_pmcps_0_psv_coresight_fpd_stm ps_wizard_0_pmcps_0_psv_coresight_lpd_atm ps_wizard_0_pmcps_0_psv_pmc_rsa ps_wizard_0_pmcps_0_psv_pmc_efuse_cache ps_wizard_0_pmcps_0_psv_pmc_efuse_ctrl ps_wizard_0_pmcps_0_psv_fpd_afi_0 ps_wizard_0_pmcps_0_psv_fpd_afi_2 ps_wizard_0_pmcps_0_psv_apu_0 ps_wizard_0_pmcps_0_psv_fpd_cci_0 ps_wizard_0_pmcps_0_psv_fpd_gpv_0 ps_wizard_0_pmcps_0_psv_fpd_slcr_0 ps_wizard_0_pmcps_0_psv_fpd_slcr_secure_0 ps_wizard_0_pmcps_0_psv_fpd_smmu_0 ps_wizard_0_pmcps_0_psv_scntr_0 ps_wizard_0_pmcps_0_psv_scntrs_0 ps_wizard_0_pmcps_0_psv_lpd_afi_0 ps_wizard_0_pmcps_0_psv_lpd_iou_secure_slcr_0 ps_wizard_0_pmcps_0_psv_lpd_iou_slcr_0 ps_wizard_0_pmcps_0_psv_lpd_slcr_0 ps_wizard_0_pmcps_0_psv_lpd_slcr_secure_0 ps_wizard_0_pmcps_0_psv_ocm_ctrl ps_wizard_0_pmcps_0_psv_pmc_global_0 ps_wizard_0_pmcps_0_psv_pmc_ram_npi ps_wizard_0_pmcps_0_psv_pmc_slave_boot ps_wizard_0_pmcps_0_psv_pmc_slave_boot_stream ps_wizard_0_pmcps_0_psv_psm_global_reg ps_wizard_0_pmcps_0_psv_rpu_0 ps_wizard_0_pmcps_0_psv_pmc_sha psv_r5_0_atcm_global psv_r5_1_atcm_global psv_r5_1_btcm_global lpd_xppu pmc_xppu pmc_xppu_npi fpd_xmpu pmc_xmpu ocm_xmpu axi_intc_0 VitisRegion_csi_feat VitisRegion_mm2s_iq VitisRegion_ofdm_be VitisRegion_ofdm_fe VitisRegion_rf_iq_mux_0 VitisRegion_rf_rfdc_0 VitisRegion_s2mm_csi VitisRegion_s2mm_feat VitisRegion_wifi_ddc ai_engine_0
+        slaves:
+            axi_noc2_DDR_LOW_0:
+                device_type: memory
+                ip_name: axi_noc2_DDR_LOW
+                baseaddr: '0x0'
+                highaddr: '0x80000000'
+            axi_noc2_DDR_LOW_1:
+                device_type: memory
+                ip_name: axi_noc2_DDR_LOW
+                baseaddr: '0x800000000'
+                highaddr: '0x880000000'
+            axi_noc2_DDR_CH_1:
+                device_type: memory
+                ip_name: axi_noc2_DDR_CH
+                baseaddr: '0x50000000000'
+                highaddr: '0x50100000000'
+            axi_noc2_DDR_CH_2:
+                device_type: memory
+                ip_name: axi_noc2_DDR_CH
+                baseaddr: '0x60000000000'
+                highaddr: '0x60100000000'
+            axi_noc2_DDR_CH_3:
+                device_type: memory
+                ip_name: axi_noc2_DDR_CH
+                baseaddr: '0x70000000000'
+                highaddr: '0x70100000000'
+            psv_ocm_0:
+                device_type: memory
+                ip_name: psv_ocm
+                baseaddr: '0xfffc0000'
+                highaddr: '0x100000000'
+            serial0:
+                device_type: serial
+                ip_name: psv_sbsauart
+                baseaddr: '0xff000000'
+            serial1:
+                device_type: serial
+                ip_name: psv_sbsauart
+                baseaddr: '0xff010000'
+            gem0:
+                device_type: ethernet
+                ip_name: psv_ethernet
+            sdhci1:
+                device_type: sd
+                ip_name: psv_pmc_sd
+            ospi:
+                device_type: flash
+                ip_name: psv_pmc_ospi
+            gic_a72:
+                ip_name: psv_acpu_gic
+            cci:
+                ip_name: psv_fpd_maincci
+            lpd_dma_chan0:
+                ip_name: psv_adma
+            lpd_dma_chan1:
+                ip_name: psv_adma
+            lpd_dma_chan2:
+                ip_name: psv_adma
+            lpd_dma_chan3:
+                ip_name: psv_adma
+            lpd_dma_chan4:
+                ip_name: psv_adma
+            lpd_dma_chan5:
+                ip_name: psv_adma
+            lpd_dma_chan6:
+                ip_name: psv_adma
+            lpd_dma_chan7:
+                ip_name: psv_adma
+            gpio0:
+                ip_name: psv_gpio
+            gpio1:
+                ip_name: psv_pmc_gpio
+            i2c0:
+                ip_name: psv_i2c
+            i2c1:
+                ip_name: psv_i2c
+            rtc:
+                ip_name: psv_pmc_rtc
+            smmu:
+                ip_name: psv_fpd_smmutcu
+            sysmon0:
+                ip_name: psv_pmc_sysmon
+            ttc0:
+                ip_name: psv_ttc
+            ttc1:
+                ip_name: psv_ttc
+            ttc2:
+                ip_name: psv_ttc
+            ttc3:
+                ip_name: psv_ttc
+            usb0:
+                ip_name: psv_usb
+            dwc3_0:
+                ip_name: psv_usb_xhci
+            dma0:
+                ip_name: psv_pmc_dma
+            dma1:
+                ip_name: psv_pmc_dma
+            pmc_trng:
+                ip_name: psv_pmc_trng
+            pmc_cfi_cframe_0:
+                ip_name: psv_pmc_cfi_cframe
+            pmc_cfu_apb_0:
+                ip_name: psv_pmc_cfu_apb
+            pmc_ppu1_mdm_0:
+                ip_name: psv_pmc_ppu1_mdm
+            ipi0:
+                ip_name: psv_ipi
+            ipi3:
+                ip_name: psv_ipi
+            ipi4:
+                ip_name: psv_ipi
+            ipi5:
+                ip_name: psv_ipi
+            ipi6:
+                ip_name: psv_ipi
+            coresight:
+                ip_name: psv_coresight
+            ps_wizard_0_pmcps_0_psv_pmc_aes:
+                ip_name: psv_pmc_aes
+            ps_wizard_0_pmcps_0_psv_pmc_bbram_ctrl:
+                ip_name: psv_pmc_bbram_ctrl
+            ps_wizard_0_pmcps_0_psv_crf_0:
+                ip_name: psv_crf
+            ps_wizard_0_pmcps_0_psv_crl_0:
+                ip_name: psv_crl
+            ps_wizard_0_pmcps_0_psv_crp_0:
+                ip_name: psv_crp
+            ps_wizard_0_pmcps_0_psv_coresight_a720_cti:
+                ip_name: psv_coresight_a720_cti
+            ps_wizard_0_pmcps_0_psv_coresight_a720_dbg:
+                ip_name: psv_coresight_a720_dbg
+            ps_wizard_0_pmcps_0_psv_coresight_a720_etm:
+                ip_name: psv_coresight_a720_etm
+            ps_wizard_0_pmcps_0_psv_coresight_a720_pmu:
+                ip_name: psv_coresight_a720_pmu
+            ps_wizard_0_pmcps_0_psv_coresight_a721_cti:
+                ip_name: psv_coresight_a721_cti
+            ps_wizard_0_pmcps_0_psv_coresight_a721_dbg:
+                ip_name: psv_coresight_a721_dbg
+            ps_wizard_0_pmcps_0_psv_coresight_a721_etm:
+                ip_name: psv_coresight_a721_etm
+            ps_wizard_0_pmcps_0_psv_coresight_a721_pmu:
+                ip_name: psv_coresight_a721_pmu
+            ps_wizard_0_pmcps_0_psv_coresight_apu_cti:
+                ip_name: psv_coresight_apu_cti
+            ps_wizard_0_pmcps_0_psv_coresight_apu_ela:
+                ip_name: psv_coresight_apu_ela
+            ps_wizard_0_pmcps_0_psv_coresight_apu_etf:
+                ip_name: psv_coresight_apu_etf
+            ps_wizard_0_pmcps_0_psv_coresight_apu_fun:
+                ip_name: psv_coresight_apu_fun
+            ps_wizard_0_pmcps_0_psv_coresight_fpd_atm:
+                ip_name: psv_coresight_fpd_atm
+            ps_wizard_0_pmcps_0_psv_coresight_fpd_stm:
+                ip_name: psv_coresight_fpd_stm
+            ps_wizard_0_pmcps_0_psv_coresight_lpd_atm:
+                ip_name: psv_coresight_lpd_atm
+            ps_wizard_0_pmcps_0_psv_pmc_rsa:
+                ip_name: psv_pmc_rsa
+            ps_wizard_0_pmcps_0_psv_pmc_efuse_cache:
+                ip_name: psv_pmc_efuse_cache
+            ps_wizard_0_pmcps_0_psv_pmc_efuse_ctrl:
+                ip_name: psv_pmc_efuse_ctrl
+            ps_wizard_0_pmcps_0_psv_fpd_afi_0:
+                ip_name: psv_fpd_afi
+            ps_wizard_0_pmcps_0_psv_fpd_afi_2:
+                ip_name: psv_fpd_afi
+            ps_wizard_0_pmcps_0_psv_apu_0:
+                ip_name: psv_apu
+            ps_wizard_0_pmcps_0_psv_fpd_cci_0:
+                ip_name: psv_fpd_cci
+            ps_wizard_0_pmcps_0_psv_fpd_gpv_0:
+                ip_name: psv_fpd_gpv
+            ps_wizard_0_pmcps_0_psv_fpd_slcr_0:
+                ip_name: psv_fpd_slcr
+            ps_wizard_0_pmcps_0_psv_fpd_slcr_secure_0:
+                ip_name: psv_fpd_slcr_secure
+            ps_wizard_0_pmcps_0_psv_fpd_smmu_0:
+                ip_name: psv_fpd_smmu
+            ps_wizard_0_pmcps_0_psv_scntr_0:
+                ip_name: psv_scntr
+            ps_wizard_0_pmcps_0_psv_scntrs_0:
+                ip_name: psv_scntrs
+            ps_wizard_0_pmcps_0_psv_lpd_afi_0:
+                ip_name: psv_lpd_afi
+            ps_wizard_0_pmcps_0_psv_lpd_iou_secure_slcr_0:
+                ip_name: psv_lpd_iou_secure_slcr
+            ps_wizard_0_pmcps_0_psv_lpd_iou_slcr_0:
+                ip_name: psv_lpd_iou_slcr
+            ps_wizard_0_pmcps_0_psv_lpd_slcr_0:
+                ip_name: psv_lpd_slcr
+            ps_wizard_0_pmcps_0_psv_lpd_slcr_secure_0:
+                ip_name: psv_lpd_slcr_secure
+            ps_wizard_0_pmcps_0_psv_ocm_ctrl:
+                ip_name: psv_ocm
+            ps_wizard_0_pmcps_0_psv_pmc_global_0:
+                ip_name: psv_pmc_global
+            ps_wizard_0_pmcps_0_psv_pmc_ram_npi:
+                ip_name: psv_pmc_ram_npi
+            ps_wizard_0_pmcps_0_psv_pmc_slave_boot:
+                ip_name: psv_pmc_slave_boot
+            ps_wizard_0_pmcps_0_psv_pmc_slave_boot_stream:
+                ip_name: psv_pmc_slave_boot_stream
+            ps_wizard_0_pmcps_0_psv_psm_global_reg:
+                ip_name: psv_psm_global_reg
+            ps_wizard_0_pmcps_0_psv_rpu_0:
+                ip_name: psv_rpu
+            ps_wizard_0_pmcps_0_psv_pmc_sha:
+                ip_name: psv_pmc_sha
+            psv_r5_0_atcm_global:
+                ip_name: psv_tcm_global
+            psv_r5_1_atcm_global:
+                ip_name: psv_tcm_global
+            psv_r5_1_btcm_global:
+                ip_name: psv_tcm_global
+            lpd_xppu:
+                ip_name: psv_lpd_xppu
+            pmc_xppu:
+                ip_name: psv_pmc_xppu
+            pmc_xppu_npi:
+                ip_name: psv_pmc_xppu_npi
+            fpd_xmpu:
+                ip_name: psv_fpd_slave_xmpu
+            pmc_xmpu:
+                ip_name: psv_pmc_xmpu
+            ocm_xmpu:
+                ip_name: psv_ocm_xmpu
+            axi_intc_0:
+                ip_name: axi_intc
+            VitisRegion_csi_feat:
+                ip_name: csi_feat
+            VitisRegion_mm2s_iq:
+                ip_name: mm2s
+            VitisRegion_ofdm_be:
+                ip_name: ofdm_be
+            VitisRegion_ofdm_fe:
+                ip_name: ofdm_fe
+            VitisRegion_rf_iq_mux_0:
+                ip_name: iq_mux
+            VitisRegion_rf_rfdc_0:
+                ip_name: vrf_data_converter
+            VitisRegion_s2mm_csi:
+                ip_name: s2mm
+            VitisRegion_s2mm_feat:
+                ip_name: s2mm
+            VitisRegion_wifi_ddc:
+                ip_name: wifi_ddc
+            ai_engine_0:
+                ip_name: ai_engine

@@ -1,0 +1,321 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Sep 28 12:52:12 2026
+| Host         : xcoapps75 running 64-bit Ubuntu 24.04 LTS
+| Command      : report_utilization -file /group/bcapps/ajayad/master_thesis_rebirth/WiFi-HAR-VRK160/hw/build/vrk160_ofdm_util.rpt
+| Design       : vrk160_ofdm_wrapper
+| Device       : xcvr1602-vsva2488-2MP-e-S-es1
+| Speed File   : -2MP
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Netlist Logic
+2. CLB Distribution
+3. BLOCKRAM
+4. ARITHMETIC
+5. I/O
+6. CLOCK
+7. NOC Interfaces
+8. AI Engines
+9. ADVANCED
+10. Primitives
+11. Black Boxes
+12. Instantiated Netlists
+
+1. Netlist Logic
+----------------
+
++----------------------------+-------+-------+------------+-----------+-------+
+|          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
++----------------------------+-------+-------+------------+-----------+-------+
+| Registers                  | 41134 |     0 |          0 |   1102080 |  3.73 |
+|   Register as Flip Flop    | 41132 |     0 |          0 |   1102080 |  3.73 |
+|   Register as Latch        |     0 |     0 |          0 |   1102080 |  0.00 |
+|   Register as AND/OR       |     2 |     0 |          0 |   1102080 | <0.01 |
+| CLB LUTs                   | 33974 |     0 |          0 |    551040 |  6.17 |
+|   LUT as Logic             | 32193 |     0 |          0 |    551040 |  5.84 |
+|   LUT as Memory            |  1781 |     0 |          0 |    275520 |  0.65 |
+|     LUT as Distributed RAM |   509 |     0 |            |           |       |
+|     LUT as Shift Register  |  1272 |     0 |            |           |       |
+|       Variable Length SRL  |   589 |     0 |            |           |       |
+|       Fixed Length SRL     |   683 |     0 |            |           |       |
+| LOOKAHEAD8                 |  1606 |     0 |          0 |     68880 |  2.33 |
+| Unique Control Sets        |  1220 |       |          0 |    137760 |  0.89 |
++----------------------------+-------+-------+------------+-----------+-------+
+* Warning! LUT value is adjusted to account for LUT combining.
+** Note: Available Control Sets calculated as Slices * 2, Review the Control Sets Report for more information regarding control sets.
+
+
+2. CLB Distribution
+-------------------
+
++-----------------------------------------------+-------+-------+------------+-----------+-------+
+|                   Site Type                   |  Used | Fixed | Prohibited | Available | Util% |
++-----------------------------------------------+-------+-------+------------+-----------+-------+
+| SLICE                                         |  6775 |     0 |          0 |     68880 |  9.84 |
+|   SLICEL                                      |  3464 |     0 |            |           |       |
+|   SLICEM                                      |  3311 |     0 |            |           |       |
+|      using Distributed RAM or Shift Registers |   315 |     0 |            |           |       |
+| CLB LUTs                                      | 33974 |     0 |          0 |    551040 |  6.17 |
+|    using CASCADE                              | 10983 |     0 |            |           |       |
+|   LUT as Logic                                | 32193 |     0 |          0 |    551040 |  5.84 |
+|     single output                             | 13081 |       |            |           |       |
+|     dual output                               | 19112 |       |            |           |       |
+|   LUT as Memory                               |  1781 |     0 |          0 |    275520 |  0.65 |
+|     LUT as Distributed RAM                    |   509 |     0 |            |           |       |
+|       single output                           |   301 |       |            |           |       |
+|       dual output                             |   208 |       |            |           |       |
+|     LUT as Shift Register                     |  1272 |     0 |            |           |       |
+|       single output                           |  1000 |       |            |           |       |
+|       dual output                             |   272 |       |            |           |       |
+| CLB Registers                                 | 41134 |     0 |          0 |   1102080 |  3.73 |
+|   Register driven from within the CLB         | 16812 |       |            |           |       |
+|   Register driven from outside the CLB        | 24322 |       |            |           |       |
+|     LUT in front of the register is unused    | 15691 |       |            |           |       |
+|     LUT in front of the register is used      |  8631 |       |            |           |       |
+| CLB Imux registers                            |     0 |     0 |            |           |       |
+|   Pipelining                                  |     0 |       |            |           |       |
++-----------------------------------------------+-------+-------+------------+-----------+-------+
+
+
+3. BLOCKRAM
+-----------
+
++--------------------------+------+-------+------------+-----------+-------+
+|         Site Type        | Used | Fixed | Prohibited | Available | Util% |
++--------------------------+------+-------+------------+-----------+-------+
+| Block RAM Tile           | 36.5 |     0 |          0 |      1109 |  3.29 |
+|   RAMB36E5               |   34 |     0 |          0 |      1109 |  3.07 |
+|   RAMB18E5*              |    5 |     0 |          0 |      2218 |  0.23 |
+| Block RAM Imux registers |    0 |     0 |            |           |       |
+|   Pipelining             |    0 |       |            |           |       |
+| URAM                     |    0 |     0 |          0 |       357 |  0.00 |
+| URAM Imux registers      |    0 |     0 |            |           |       |
+|   Pipelining             |    0 |       |            |           |       |
++--------------------------+------+-------+------------+-----------+-------+
+* Note: Each RAMB18 is counted as 0.5 Block RAM tiles
+
+
+4. ARITHMETIC
+-------------
+
++--------------------+------+-------+------------+-----------+-------+
+|      Site Type     | Used | Fixed | Prohibited | Available | Util% |
++--------------------+------+-------+------------+-----------+-------+
+| DSP Slices         |  124 |     0 |          0 |      2256 |  5.50 |
+|   DSP58            |   76 |     0 |            |           |       |
+|   DSPCPLX          |    1 |     0 |            |           |       |
+|   DSPFP32          |   40 |     0 |            |           |       |
+|   DSP48E5          |    6 |     0 |            |           |       |
+| DSP Imux registers |    0 |     0 |            |           |       |
+|   Pipelining       |    0 |       |            |           |       |
+| BFR_FT             |    0 |     0 |          0 |        28 |  0.00 |
+| SDFEC_LD           |    0 |     0 |          0 |         4 |  0.00 |
+| DFE_CHANNELIZER    |    0 |     0 |          0 |        56 |  0.00 |
++--------------------+------+-------+------------+-----------+-------+
+
+
+5. I/O
+------
+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| Bonded IOB     |  280 |   276 |          0 |       470 | 59.57 |
+|   HDIO IOB     |    0 |     0 |          0 |        22 |  0.00 |
+|   X5IO         |  280 |   276 |          0 |       448 | 62.50 |
+| X5PHIO_XCVR_X2 |  160 |   160 |          0 |       224 | 71.43 |
+| CMPHY_OCTAD    |    0 |     0 |          0 |        72 |  0.00 |
+| X5PHIO_DCCIBUF |    0 |     0 |          0 |       144 |  0.00 |
+| X5PHIO_CMU_X32 |    0 |     0 |          0 |        18 |  0.00 |
+| X5PHIO_CMUIF   |    0 |     0 |          0 |        18 |  0.00 |
++----------------+------+-------+------------+-----------+-------+
+* Note: Refer to report_io for information on MIO pins.
+
+
+6. CLOCK
+--------
+
++------------------------+------+-------+------------+-----------+-------+
+|        Site Type       | Used | Fixed | Prohibited | Available | Util% |
++------------------------+------+-------+------------+-----------+-------+
+| BUFGCE_DIV/MBUFGCE_DIV |    0 |     0 |          0 |        28 |  0.00 |
+| BUFG_PS/MBUFG_PS       |    1 |     0 |          0 |        12 |  8.33 |
+| BUFG_GT/MBUFG_GT       |    1 |     0 |          0 |       168 |  0.60 |
+| BUFGCE/MBUFGCE         |    5 |     0 |          0 |       220 |  2.27 |
+| BUFGCTRL/MBUFGCTRL*    |    0 |     0 |          0 |        56 |  0.00 |
+| BUFG_FABRIC            |    0 |     0 |          0 |       192 |  0.00 |
+| DPLL                   |    0 |     0 |          0 |        24 |  0.00 |
+| X5PLL                  |    8 |     8 |          0 |        18 | 44.44 |
+| MMCM                   |    2 |     0 |          0 |         9 | 22.22 |
++------------------------+------+-------+------------+-----------+-------+
+* Note: Each used BUFGCTRL/MBUFGCTRL counts as two GLOBAL CLOCK BUFFERs. This table does not include global clocking resources, only buffer cell usage. See the Clock Utilization Report (report_clock_utilization) for detailed accounting of global clocking resource availability.
+
+
+7. NOC Interfaces
+-----------------
+
++---------------------+------+-------+------------+-----------+--------+
+|      Site Type      | Used | Fixed | Prohibited | Available |  Util% |
++---------------------+------+-------+------------+-----------+--------+
+| NOC2 Master 512 bit |    2 |     0 |          0 |        22 |   9.09 |
+| NOC2 Slave 512 bit  |    0 |     0 |          0 |        16 |   0.00 |
+| NOC Master 128 bit  |    0 |     0 |          0 |        16 |   0.00 |
+| NOC Slave 128 bit   |    1 |     0 |          0 |        16 |   6.25 |
+| NOC2 Master 128 bit |    8 |     8 |          0 |         8 | 100.00 |
+| NOC2 Slave 128 bit  |    0 |     0 |          0 |         5 |   0.00 |
++---------------------+------+-------+------------+-----------+--------+
+
+
+8. AI Engines
+-------------
+
++------------+------+-------+------------+-----------+-------+
+|  Site Type | Used | Fixed | Prohibited | Available | Util% |
++------------+------+-------+------------+-----------+-------+
+| AI Engines |    0 |     0 |          0 |       126 |  0.00 |
+| PL Master  |    0 |     0 |          0 |       168 |  0.00 |
+| PL Slave   |    0 |     0 |          0 |       224 |  0.00 |
+| NOC Master |    0 |     0 |          0 |        16 |  0.00 |
+| NOC Slave  |    1 |     0 |          0 |        16 |  6.25 |
++------------+------+-------+------------+-----------+-------+
+
+
+9. ADVANCED
+-----------
+
++--------------------+------+-------+------------+-----------+--------+
+|      Site Type     | Used | Fixed | Prohibited | Available |  Util% |
++--------------------+------+-------+------------+-----------+--------+
+| GTME5_QUAD         |    0 |     0 |          0 |         2 |   0.00 |
+| GTYP_QUAD          |    0 |     0 |          0 |         3 |   0.00 |
+| MRMAC              |    0 |     0 |          0 |         2 |   0.00 |
+| NPI_NIR            |    0 |     0 |          0 |         1 |   0.00 |
+| OBUFDS_GTE5        |    0 |     0 |          0 |         8 |   0.00 |
+| OBUFDS_GTE5_ADV    |    0 |     0 |          0 |         8 |   0.00 |
+| OBUFDS_GTME5       |    0 |     0 |          0 |         4 |   0.00 |
+| OBUFDS_GTME5_ADV   |    0 |     0 |          0 |         4 |   0.00 |
+| OBUFTDS_COMP       |    0 |     0 |          0 |       224 |   0.00 |
+| PCIE50E5           |    0 |     0 |          0 |         1 |   0.00 |
+| PS9                |    1 |     1 |          0 |         1 | 100.00 |
+| DDRMC5E            |    4 |     4 |          0 |         6 |  66.67 |
+| RFADCE5            |    4 |     4 |          0 |         4 | 100.00 |
+| RFDACE5            |    4 |     4 |          0 |         4 | 100.00 |
+| BLI Registers      |    0 |     0 |          0 |     51920 |   0.00 |
+| BLI Imux Registers |    0 |     0 |            |           |        |
+|   Pipelining       |    0 |     0 |            |           |        |
+| ADVANCED Imux      |    0 |     0 |            |           |        |
++--------------------+------+-------+------------+-----------+--------+
+
+
+10. Primitives
+--------------
+
++------------------+-------+---------------------+
+|     Ref Name     |  Used | Functional Category |
++------------------+-------+---------------------+
+| FDRE             | 39521 |            Register |
+| LUTCY2           | 11325 |                 CLB |
+| LUTCY1           | 11325 |                 CLB |
+| LUT3             |  7900 |                 CLB |
+| LUT6             |  6933 |                 CLB |
+| LUT5             |  5522 |                 CLB |
+| LUT4             |  4812 |                 CLB |
+| LUT2             |  3128 |                 CLB |
+| LOOKAHEAD8       |  1606 |                 CLB |
+| FDSE             |  1322 |            Register |
+| SRL16E           |   918 |                 CLB |
+| SRLC32E          |   626 |                 CLB |
+| LUT1             |   360 |                 CLB |
+| RAMS64E5         |   288 |                 CLB |
+| FDCE             |   288 |            Register |
+| RAMD32           |   284 |                 CLB |
+| X5PHIO_XCVR_X2   |   160 |                 I/O |
+| RAMS32           |   133 |                 CLB |
+| X5PHIO_DCCINVBUF |    80 |                 I/O |
+| DSP58            |    76 |          Arithmetic |
+| DSPFP32          |    40 |          Arithmetic |
+| CMPHY_OCTAD      |    40 |                 I/O |
+| RAMB36E5_INT     |    34 |            BLOCKRAM |
+| RAMD64E5         |    12 |                 CLB |
+| X5PHIO_CMU_X32   |    10 |                 I/O |
+| X5PHIO_CMUIF     |    10 |                 I/O |
+| X5PLL_S2P        |     8 |               Clock |
+| X5PLL_INTF       |     8 |               Clock |
+| X5PLL            |     8 |               Clock |
+| NOC2_NMU128      |     8 |            Advanced |
+| DSP48E5          |     6 |          Arithmetic |
+| RAMB18E5_INT     |     5 |            BLOCKRAM |
+| RFDACE5          |     4 |            Advanced |
+| RFADCE5          |     4 |            Advanced |
+| OBUF             |     4 |                 I/O |
+| DDRMC5E          |     4 |            Advanced |
+| BUFGCE           |     4 |               Clock |
+| NOC2_NMU512      |     2 |            Advanced |
+| MMCME5           |     2 |               Clock |
+| AND2B1L          |     2 |              Others |
+| PS9              |     1 |            Advanced |
+| NOC_NSU128       |     1 |            Advanced |
+| MBUFGCE          |     1 |               Clock |
+| IBUFDS           |     1 |                 I/O |
+| FDPE             |     1 |            Register |
+| DSPCPLX          |     1 |          Arithmetic |
+| BUFG_PS          |     1 |               Clock |
+| BUFG_GT_SYNC     |     1 |               Clock |
+| BUFG_GT          |     1 |               Clock |
+| AIE_NOC_S_AXI    |     1 |            Advanced |
++------------------+-------+---------------------+
+
+
+11. Black Boxes
+---------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+12. Instantiated Netlists
+-------------------------
+
++---------------------------------+------+
+|             Ref Name            | Used |
++---------------------------------+------+
+| vrk160_ofdm_wifi_ddc_0          |    1 |
+| vrk160_ofdm_util_ds_buf_0_0     |    1 |
+| vrk160_ofdm_s2mm_csi_0          |    1 |
+| vrk160_ofdm_rst_dp_0            |    1 |
+| vrk160_ofdm_rfdc_0_0            |    1 |
+| vrk160_ofdm_rf_rst_0            |    1 |
+| vrk160_ofdm_rf_fifo_0           |    1 |
+| vrk160_ofdm_rf_clk_wiz_0        |    1 |
+| vrk160_ofdm_proc_sys_reset_o4_0 |    1 |
+| vrk160_ofdm_proc_sys_reset_1_0  |    1 |
+| vrk160_ofdm_ofdm_fe_0           |    1 |
+| vrk160_ofdm_ofdm_be_0           |    1 |
+| vrk160_ofdm_mm2s_iq_0           |    1 |
+| vrk160_ofdm_iq_mux_0_0          |    1 |
+| vrk160_ofdm_ctrl_smc_0          |    1 |
+| vrk160_ofdm_csi_fifo_0          |    1 |
+| vrk160_ofdm_clk_wizard_0_0      |    1 |
+| vrk160_ofdm_cap_fifo_0          |    1 |
+| vrk160_ofdm_axi_intc_0_0        |    1 |
+| vrk160_ofdm_aggr_noc_0          |    1 |
+| vrk160_ofdm_NoC_C3_0            |    1 |
+| vrk160_ofdm_NoC_C2_0            |    1 |
+| vrk160_ofdm_NoC_C1_0            |    1 |
+| vrk160_ofdm_NoC_C0_0            |    1 |
+| vrk160_ofdm_Master_NoC_0        |    1 |
+| vrk160_ofdm_ConfigNoc_0         |    1 |
+| bd_feb4_MC0_ddrc_0_phy_4085     |    1 |
+| bd_fe44_MC0_ddrc_0_phy_1760     |    1 |
+| bd_3ee5_MC0_ddrc_0_phy_45795    |    1 |
+| bd_3e15_MC0_ddrc_0_phy_14091    |    1 |
++---------------------------------+------+
+
+

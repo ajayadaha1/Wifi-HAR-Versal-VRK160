@@ -1,0 +1,27 @@
+/* plain_design.dtsi - device-tree additions for the PLAIN-Vivado OFDM-receiver
+ * design (hw/build/vrk160_ofdm_rx.xsa, driven by sw/ofdm_ctl.py over /dev/mem).
+ * NOT used by the XRT/AIE design (that one uses XRT-managed buffers, see
+ * project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi).
+ *
+ * To build a PetaLinux image for the plain design: its XSA has ONE full PDI (no
+ * segmented configuration), so the PL is configured by BOOT.BIN and its nodes belong
+ * in the base device tree: disable CONFIG_SUBSYSTEM_FPGA_MANAGER (petalinux-config ->
+ * FPGA Manager), import the XSA with petalinux/scripts/import_hw.sh
+ * hw/build/vrk160_ofdm_rx.xsa and append this file to system-user.dtsi.
+ *
+ * The PL movers (mm2s_iq / s2mm_csi) are driverless AXI masters: their DDR
+ * landing zone must not belong to Linux. 256 MB no-map carve-out at
+ * 0x6000_0000, inside DDR_CH0_LEGACY (0x0-0x7FFF_FFFF), the aperture the movers
+ * are mapped to in vrk160_ofdm_design.tcl.
+ */
+/ {
+        reserved-memory {
+                #address-cells = <2>;
+                #size-cells = <2>;
+                ranges;
+                ofdm_dma: ofdm-dma@60000000 {
+                        no-map;
+                        reg = <0x0 0x60000000 0x0 0x10000000>;
+                };
+        };
+};

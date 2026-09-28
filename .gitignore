@@ -1,0 +1,67 @@
+# Build / tool outputs - keep the repo to design sources only (reference convention).
+*.jou
+*.log
+*.str
+*.backup*
+.Xil/
+**/.crashReporter/
+__pycache__/
+*.pyc
+.nfs*
+
+# HLS (hls/build_kernels.sh): per-kernel projects + exported .xo/.zip
+hls/build/
+hls/tb/golden_chain
+
+# AIE / v++ (aie/build_hw.sh, link.sh, package.sh)
+aie/Work_hw/
+aie/Work_x86/
+aie/x86simulator_output/
+aie/analyzer_input/
+aie/*_Report.csv
+aie/sol.db
+aie/*.db
+aie/*.link_summary
+aie/*.package_summary
+aie/.AIE_SIM_CMD_LINE_OPTIONS
+aie/pl_sample_count*
+aie/ISS_RPC_SERVER_PORT
+aie/libadf.a
+aie/libadf_x86.a
+aie/_x*/
+aie/*.xsa
+aie/*.xsa.info
+aie/*.xclbin
+aie/*.xclbin.info
+aie/*.link_summary
+aie/*.package_summary
+aie/*.ltx
+aie/package/
+aie/.ipcache/
+aie/v++*
+aie/xcd.log
+aie/host/host_wifi
+
+# plain-Vivado project (hw/scripts/project_top.tcl)
+hw/build/
+
+# golden vectors (build_vivado.sh step 2) - regenerated from csi_ref/*.py
+build/
+*.npz
+
+# PetaLinux: only project-spec/, scripts/, .petalinux/metadata are sources
+petalinux/build/
+petalinux/components/
+petalinux/images/
+petalinux/project-spec/configs/*.old
+petalinux/project-spec/configs/gen-machineconf.log*
+petalinux/project-spec/hw-description/
+# recipe payload staged by build_petalinux.sh (host binary, xclbin, vectors, copies)
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/host_wifi
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/wifi_har_vrk160.xclbin
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/wifi_har_vrk160.pdi
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/wifi_har_vrk160.dtbo
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/vectors/
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/live_dashboard.py
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/features8.py
+petalinux/project-spec/meta-user/recipes-apps/wifi-har/files/ofdm_ctl.py

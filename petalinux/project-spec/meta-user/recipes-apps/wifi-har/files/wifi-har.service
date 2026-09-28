@@ -1,0 +1,14 @@
+[Unit]
+Description=VRK160 WiFi-CSI HAR: boot self-test + dashboard
+After=multi-user.target network.target
+
+[Service]
+Type=forking
+ExecStart=/home/root/wifi-har/wifi-har-autorun.sh
+StandardOutput=journal+console
+StandardError=journal+console
+RemainAfterExit=yes
+TimeoutStartSec=240
+
+[Install]
+WantedBy=multi-user.target

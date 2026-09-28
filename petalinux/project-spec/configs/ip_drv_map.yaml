@@ -1,0 +1,261 @@
+VitisRegion_csi_feat:
+- csi_feat
+- None
+VitisRegion_mm2s_iq:
+- mm2s
+- None
+VitisRegion_ofdm_be:
+- ofdm_be
+- None
+VitisRegion_ofdm_fe:
+- ofdm_fe
+- None
+VitisRegion_rf_iq_mux_0:
+- iq_mux
+- None
+VitisRegion_rf_rfdc_0:
+- vrf_data_converter
+- None
+VitisRegion_s2mm_csi:
+- s2mm
+- None
+VitisRegion_s2mm_feat:
+- s2mm
+- None
+VitisRegion_wifi_ddc:
+- wifi_ddc
+- None
+axi_intc_0:
+- axi_intc
+- intc
+ps_wizard_0_pmcps_0_psv_adma_0:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_1:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_2:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_3:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_4:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_5:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_6:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_adma_7:
+- psv_adma
+- zdma
+ps_wizard_0_pmcps_0_psv_crf_0:
+- psv_crf
+- None
+ps_wizard_0_pmcps_0_psv_crl_0:
+- psv_crl
+- None
+ps_wizard_0_pmcps_0_psv_crp_0:
+- psv_crp
+- None
+ps_wizard_0_pmcps_0_psv_ethernet_0:
+- psv_ethernet
+- emacps
+ps_wizard_0_pmcps_0_psv_fpd_afi_0:
+- psv_fpd_afi
+- None
+ps_wizard_0_pmcps_0_psv_fpd_afi_2:
+- psv_fpd_afi
+- None
+ps_wizard_0_pmcps_0_psv_fpd_cci_0:
+- psv_fpd_cci
+- None
+ps_wizard_0_pmcps_0_psv_fpd_gpv_0:
+- psv_fpd_gpv
+- None
+ps_wizard_0_pmcps_0_psv_fpd_maincci_0:
+- psv_fpd_maincci
+- None
+ps_wizard_0_pmcps_0_psv_fpd_slave_xmpu_0:
+- psv_fpd_slave_xmpu
+- None
+ps_wizard_0_pmcps_0_psv_fpd_slcr_0:
+- psv_fpd_slcr
+- None
+ps_wizard_0_pmcps_0_psv_fpd_slcr_secure_0:
+- psv_fpd_slcr_secure
+- None
+ps_wizard_0_pmcps_0_psv_fpd_smmu_0:
+- psv_fpd_smmu
+- None
+ps_wizard_0_pmcps_0_psv_fpd_smmutcu_0:
+- psv_fpd_smmutcu
+- None
+ps_wizard_0_pmcps_0_psv_gpio_2:
+- psv_gpio
+- gpiops
+ps_wizard_0_pmcps_0_psv_i2c_0:
+- psv_i2c
+- iicps
+ps_wizard_0_pmcps_0_psv_i2c_1:
+- psv_i2c
+- iicps
+ps_wizard_0_pmcps_0_psv_ipi_psm:
+- psv_ipi
+- ipipsu
+ps_wizard_0_pmcps_0_psv_lpd_afi_0:
+- psv_lpd_afi
+- None
+ps_wizard_0_pmcps_0_psv_lpd_iou_secure_slcr_0:
+- psv_lpd_iou_secure_slcr
+- None
+ps_wizard_0_pmcps_0_psv_lpd_iou_slcr_0:
+- psv_lpd_iou_slcr
+- None
+ps_wizard_0_pmcps_0_psv_lpd_slcr_0:
+- psv_lpd_slcr
+- None
+ps_wizard_0_pmcps_0_psv_lpd_slcr_secure_0:
+- psv_lpd_slcr_secure
+- None
+ps_wizard_0_pmcps_0_psv_lpd_xppu_0:
+- psv_lpd_xppu
+- None
+ps_wizard_0_pmcps_0_psv_ocm_ctrl:
+- psv_ocm
+- None
+ps_wizard_0_pmcps_0_psv_ocm_xmpu_0:
+- psv_ocm_xmpu
+- None
+ps_wizard_0_pmcps_0_psv_pmc_aes:
+- psv_pmc_aes
+- None
+ps_wizard_0_pmcps_0_psv_pmc_bbram_ctrl:
+- psv_pmc_bbram_ctrl
+- None
+ps_wizard_0_pmcps_0_psv_pmc_cfi_cframe_0:
+- psv_pmc_cfi_cframe
+- cframe
+ps_wizard_0_pmcps_0_psv_pmc_cfu_apb_0:
+- psv_pmc_cfu_apb
+- cfupmc
+ps_wizard_0_pmcps_0_psv_pmc_dma_0:
+- psv_pmc_dma
+- csudma
+ps_wizard_0_pmcps_0_psv_pmc_dma_1:
+- psv_pmc_dma
+- csudma
+ps_wizard_0_pmcps_0_psv_pmc_efuse_cache:
+- psv_pmc_efuse_cache
+- None
+ps_wizard_0_pmcps_0_psv_pmc_efuse_ctrl:
+- psv_pmc_efuse_ctrl
+- None
+ps_wizard_0_pmcps_0_psv_pmc_global_0:
+- psv_pmc_global
+- None
+ps_wizard_0_pmcps_0_psv_pmc_gpio_0:
+- psv_pmc_gpio
+- gpiops
+ps_wizard_0_pmcps_0_psv_pmc_ospi_0:
+- psv_pmc_ospi
+- ospipsv
+ps_wizard_0_pmcps_0_psv_pmc_ppu1_mdm_0:
+- psv_pmc_ppu1_mdm
+- uartlite
+ps_wizard_0_pmcps_0_psv_pmc_ram_npi:
+- psv_pmc_ram_npi
+- None
+ps_wizard_0_pmcps_0_psv_pmc_rsa:
+- psv_pmc_rsa
+- None
+ps_wizard_0_pmcps_0_psv_pmc_rtc_0:
+- psv_pmc_rtc
+- rtcpsu
+ps_wizard_0_pmcps_0_psv_pmc_sd_1:
+- psv_pmc_sd
+- sdps
+ps_wizard_0_pmcps_0_psv_pmc_sha:
+- psv_pmc_sha
+- None
+ps_wizard_0_pmcps_0_psv_pmc_slave_boot:
+- psv_pmc_slave_boot
+- None
+ps_wizard_0_pmcps_0_psv_pmc_slave_boot_stream:
+- psv_pmc_slave_boot_stream
+- None
+ps_wizard_0_pmcps_0_psv_pmc_sysmon_0:
+- psv_pmc_sysmon
+- sysmonpsv
+ps_wizard_0_pmcps_0_psv_pmc_trng:
+- psv_pmc_trng
+- trngpsv
+ps_wizard_0_pmcps_0_psv_pmc_xmpu_0:
+- psv_pmc_xmpu
+- None
+ps_wizard_0_pmcps_0_psv_pmc_xppu_0:
+- psv_pmc_xppu
+- None
+ps_wizard_0_pmcps_0_psv_pmc_xppu_npi_0:
+- psv_pmc_xppu_npi
+- None
+ps_wizard_0_pmcps_0_psv_psm_global_reg:
+- psv_psm_global_reg
+- None
+ps_wizard_0_pmcps_0_psv_psm_iomodule_0:
+- iomodule
+- iomodule
+ps_wizard_0_pmcps_0_psv_psm_ram_data_cntlr:
+- PSM_PPU
+- None
+ps_wizard_0_pmcps_0_psv_psm_ram_instr_cntlr:
+- ram_instr_cntlr
+- None
+ps_wizard_0_pmcps_0_psv_psm_tmr_inject_0:
+- tmr_inject
+- tmr_inject
+ps_wizard_0_pmcps_0_psv_psm_tmr_manager_0:
+- tmr_manager
+- tmr_manager
+ps_wizard_0_pmcps_0_psv_r5_0_atcm_global:
+- psv_tcm_global
+- None
+ps_wizard_0_pmcps_0_psv_r5_1_atcm_global:
+- psv_tcm_global
+- None
+ps_wizard_0_pmcps_0_psv_r5_1_btcm_global:
+- psv_tcm_global
+- None
+ps_wizard_0_pmcps_0_psv_sbsauart_0:
+- psv_sbsauart
+- uartpsv
+ps_wizard_0_pmcps_0_psv_sbsauart_1:
+- psv_sbsauart
+- uartpsv
+ps_wizard_0_pmcps_0_psv_scntr_0:
+- psv_scntr
+- None
+ps_wizard_0_pmcps_0_psv_scntrs_0:
+- psv_scntrs
+- None
+ps_wizard_0_pmcps_0_psv_ttc_0:
+- psv_ttc
+- ttcps
+ps_wizard_0_pmcps_0_psv_ttc_1:
+- psv_ttc
+- ttcps
+ps_wizard_0_pmcps_0_psv_ttc_2:
+- psv_ttc
+- ttcps
+ps_wizard_0_pmcps_0_psv_ttc_3:
+- psv_ttc
+- ttcps
+ps_wizard_0_pmcps_0_psv_usb_0:
+- psv_usb
+- None
+ps_wizard_0_pmcps_0_psv_usb_xhci_0:
+- psv_usb_xhci
+- usbpsu

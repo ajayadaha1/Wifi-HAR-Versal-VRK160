@@ -1,0 +1,5 @@
+PETALINUX_VER=2025.2
+VALIDATE_HW_CHKSUM=1
+HARDWARE_PATH=/group/bcapps/ajayad/master_thesis_rebirth/WiFi-HAR-VRK160/petalinux/build/sdt/system-top.dts
+HDF_EXT=sdt
+YOCTO_SDK=8576b661a268f6a1638f445924bb6001e14cdc81b43e38c84762381e5ff54d50

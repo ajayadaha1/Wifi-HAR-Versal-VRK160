@@ -1,0 +1,12 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+
+/* VRK160 WiFi-HAR (XRT design): vrk160_base uses Versal segmented configuration, so
+ * the base device tree carries NO PL nodes (CONFIG_SUBSYSTEM_FPGA_MANAGER + "full" PL
+ * overlay type). The PL nodes, the AI Engine node and the zocl node (zyxclmm_drm,
+ * 32 CU interrupts on axi_intc_0) all come with the v++-generated overlay
+ * wifi_har_vrk160.dtbo that wifi-har-autorun.sh applies together with the PLD PDI:
+ *     fpgautil -b wifi_har_vrk160.pdi -o wifi_har_vrk160.dtbo
+ * Nothing board-specific is needed here. (The plain-Vivado design instead includes
+ * petalinux/scripts/plain_design.dtsi - see docs/PROJECT_STATE.md section 7.) */

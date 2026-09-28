@@ -1,0 +1,6 @@
+
+Family       : versal
+Device       : xcvr1602
+Package      : -vsva2488
+Speed Grade  : -2MP-e-S-es1
+Clock Period : 3.2
